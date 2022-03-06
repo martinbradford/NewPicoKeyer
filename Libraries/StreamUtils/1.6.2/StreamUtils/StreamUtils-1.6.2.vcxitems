@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding ="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <PropertyGroup Label="Globals" >
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{cd4000e6-b248-4a64-87a6-f53d4eb754d8}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Configuration.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Helpers.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Polyfills.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Buffers\CharArray.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Buffers\CircularBuffer.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Buffers\LinearBuffer.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\ClientProxy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\HammingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\HammingDecodingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\HammingEncodingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\LoggingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\MemoryClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\ReadBufferingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\ReadLoggingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\SpyingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\WriteBufferingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\WriteLoggingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Clients\WriteWaitingClient.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\ConnectForwardingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\ConnectSpyingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\HammingDecodingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\HammingEncodingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\ReadBufferingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\ReadForwardingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\ReadLoggingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\ReadSpyingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\ReadThrottlingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\WriteBufferingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\WriteForwardingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\WriteLoggingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\WriteSpyingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Policies\WriteWaitingPolicy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Ports\ArduinoThrottler.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Ports\DefaultAllocator.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Prints\BufferingPrint.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Prints\HammingPrint.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Prints\LoggingPrint.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Prints\PrintProxy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Prints\SpyingPrint.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Prints\StringPrint.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Prints\WaitingPrint.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\EepromStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\HammingDecodingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\HammingEncodingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\HammingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\LoggingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\MemoryStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\ReadBufferingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\ReadLoggingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\ReadThrottlingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\SpyingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\StreamProxy.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\StringStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\WriteBufferingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\WriteLoggingStream.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\StreamUtils\Streams\WriteWaitingStream.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)CMakeLists.txt" />
+<Text Include="$(MSBuildThisFileDirectory)keywords.txt" />
+<Text Include="$(MSBuildThisFileDirectory)library.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)CHANGELOG.md" />
+<None Include="$(MSBuildThisFileDirectory)LICENSE.md" />
+<None Include="$(MSBuildThisFileDirectory)README.md" />
+  </ItemGroup>
+</Project>

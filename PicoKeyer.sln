@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PicoKeyer", "PicoKeyer\PicoKeyer.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Adafruit_LiquidCrystal-1.1.0", "Libraries\Adafruit_LiquidCrystal\1.1.0\Adafruit_LiquidCrystal\Adafruit_LiquidCrystal-1.1.0.vcxitems", "{E5CF0596-225A-4B53-A9D5-90BC72898501}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ESP8266SdFat-2.1.1", "Libraries\ESP8266SdFat\2.1.1\ESP8266SdFat\ESP8266SdFat-2.1.1.vcxitems", "{3ED5D615-D087-471B-BB2F-FD20DDA99105}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SD-2.0.0", "Libraries\SD\2.0.0\SD\SD-2.0.0.vcxitems", "{06978936-7FF9-405B-B2C5-E7BDDCAB07AE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPI-1.0", "Libraries\SPI\1.0\SPI\SPI-1.0.vcxitems", "{29DB62A7-4032-4D1E-86BB-6B59DE8F9DC4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wire-1.0", "Libraries\Wire\1.0\Wire\Wire-1.0.vcxitems", "{CD7503CF-550D-4184-B4B0-2C6C3932ED46}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XMLWriter-0.3.0", "Libraries\XMLWriter\0.3.0\XMLWriter\XMLWriter-0.3.0.vcxitems", "{A07527A1-4F63-4A9D-AF9B-437683907954}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArduinoJson-6.19.2", "Libraries\ArduinoJson\6.19.2\ArduinoJson\ArduinoJson-6.19.2.vcxitems", "{764AD986-1EE2-4A5F-8D1F-FBE3CA578716}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Libraries\SD\2.0.0\SD\SD-2.0.0.vcxitems*{06978936-7ff9-405b-b2c5-e7bddcab07ae}*SharedItemsImports = 9
+		Libraries\SPI\1.0\SPI\SPI-1.0.vcxitems*{29db62a7-4032-4d1e-86bb-6b59de8f9dc4}*SharedItemsImports = 9
+		Libraries\ESP8266SdFat\2.1.1\ESP8266SdFat\ESP8266SdFat-2.1.1.vcxitems*{3ed5d615-d087-471b-bb2f-fd20dda99105}*SharedItemsImports = 9
+		Libraries\ArduinoJson\6.19.2\ArduinoJson\ArduinoJson-6.19.2.vcxitems*{764ad986-1ee2-4a5f-8d1f-fbe3ca578716}*SharedItemsImports = 9
+		Libraries\XMLWriter\0.3.0\XMLWriter\XMLWriter-0.3.0.vcxitems*{a07527a1-4f63-4a9d-af9b-437683907954}*SharedItemsImports = 9
+		Libraries\Adafruit_LiquidCrystal\1.1.0\Adafruit_LiquidCrystal\Adafruit_LiquidCrystal-1.1.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\ArduinoJson\6.19.2\ArduinoJson\ArduinoJson-6.19.2.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\ESP8266SdFat\2.1.1\ESP8266SdFat\ESP8266SdFat-2.1.1.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\SD\2.0.0\SD\SD-2.0.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\SPI\1.0\SPI\SPI-1.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\Wire\1.0\Wire\Wire-1.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\XMLWriter\0.3.0\XMLWriter\XMLWriter-0.3.0.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		Libraries\Wire\1.0\Wire\Wire-1.0.vcxitems*{cd7503cf-550d-4184-b4b0-2c6c3932ed46}*SharedItemsImports = 9
+		Libraries\Adafruit_LiquidCrystal\1.1.0\Adafruit_LiquidCrystal\Adafruit_LiquidCrystal-1.1.0.vcxitems*{e5cf0596-225a-4b53-a9d5-90bc72898501}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7ADCCC3-DEC5-4DDD-A040-1405F090C99B}
+	EndGlobalSection
+EndGlobal
