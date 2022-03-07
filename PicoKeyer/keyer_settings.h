@@ -32,7 +32,7 @@
 #define default_length_wordspace 7
 #define default_keying_compensation 0    // number of milliseconds to extend all dits and dahs - for QSK on boatanchors
 #define default_first_extension_time 0   // number of milliseconds to extend first sent dit or dah
-#define default_pot_full_scale_reading 4096 // 1023
+#define default_pot_full_scale_reading 1023 // 1023
 #define default_weighting 50             // 50 = weighting factor of 1 (normal)
 #define default_ptt_hang_time_wordspace_units 0.0
 #define winkey_c0_wait_time 1            // the number of milliseconds to wait to send 0xc0 byte after send buffer has been sent

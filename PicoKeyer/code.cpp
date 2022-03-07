@@ -4084,6 +4084,7 @@ byte pot_value_wpm()
 	static int last_pot_read = 0;
 	static byte return_value = 0;
 	int pot_read = analogRead(potentiometer);
+	// Serial.printf("Pot : %d\n", pot_read);
 	if (abs(pot_read - last_pot_read) > potentiometer_reading_threshold) {
 		return_value = map(pot_read, 0, pot_full_scale_reading, pot_wpm_low_value, pot_wpm_high_value);
 		last_pot_read = pot_read;
@@ -8601,7 +8602,7 @@ void serial_qrss_mode()
 	}
 
 	if (error) {
-		primary_serial_port->println(F("Error..."));
+		primary_serial_port->println(F("Error(1)..."));
 		while (primary_serial_port->available() > 0) { incoming_serial_byte = primary_serial_port->read(); }  // clear out buffer
 		return;
 	}
@@ -12859,7 +12860,7 @@ int serial_get_number_input(byte places, int lower_limit, int upper_limit, PRIMA
 	}
 	if (error) {
 		if (raise_error_message == RAISE_ERROR_MSG) {
-			port_to_use->println(F("Error..."));
+			port_to_use->println(F("Error(2)..."));
 		}
 		while (port_to_use->available() > 0) { incoming_serial_byte = port_to_use->read(); }  // clear out buffer
 		return(-1);
@@ -12876,7 +12877,7 @@ int serial_get_number_input(byte places, int lower_limit, int upper_limit, PRIMA
 		}
 		else {
 			if (raise_error_message == RAISE_ERROR_MSG) {
-				port_to_use->println(F("Error..."));
+				port_to_use->println(F("Error(3)..."));
 			}
 			return(-1);
 		}
