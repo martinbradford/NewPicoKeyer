@@ -39,12 +39,6 @@
     <ClInclude Include="keyer_settings.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Documents\Keyer\k3ng_cw_keyer pi pico\k3ng_keyer\keyer_debug.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Documents\Keyer\k3ng_cw_keyer pi pico\k3ng_keyer\keyer_pin_settings.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Decoder.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -55,6 +49,12 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="keyer_callsign_prefixes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyer_debug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyer_pin_settings.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

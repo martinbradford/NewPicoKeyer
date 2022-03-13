@@ -19048,11 +19048,11 @@ void clientStatusCommand()
 
 
 #ifdef FEATURE_MABKEYER
-	configuration.decode_enabled ? response["decode"] = "off" : response["decode"] = "off"; //(WD9DMP)
+	configuration.decode_enabled ? response["decode"] = "on" : response["decode"] = "off"; //(WD9DMP)
 
 	response["decode_wpm"] = wpm; //(WD9DMP)
 
-	decoder_sidetone ? response["decode_sidetone"] = "off" : response["decode_sidetone"] = "off"; //(WD9DMP)
+	decoder_sidetone ? response["decode_sidetone"] = "on" : response["decode_sidetone"] = "off"; //(WD9DMP)
 
 	response["decode_sampling"] = trunc(sampling_freq); response["decode_target"] = trunc(target_freq); response["decode_buckets"] = trunc(bucket_count);
 	response["decode_maglimit"] = magnitudelimit; response["decode_maglimitlow"] = magnitudelimit_low;
@@ -19141,48 +19141,6 @@ void service_second_core()
 	uint32_t msg;
 	if (rp2040.fifo.pop_nb(&msg)) {
 		if (msg < 0x100) {
-			// testing
-
-			//StaticJsonDocument<200> doc;
-
-			//// StaticJsonObject allocates memory on the stack, it can be
-			//// replaced by DynamicJsonDocument which allocates in the heap.
-			////
-			//// DynamicJsonDocument  doc(200);
-
-			//// Add values in the document
-			////
-			//doc["sensor"] = "gps";
-			//doc["time"] = 1351824120;
-
-			//// Add an array.
-			////
-			//JsonArray data = doc.createNestedArray("data");
-			//data.add(48.756080);
-			//data.add(2.302038);
-
-			//// Generate the minified JSON and send it to the Serial port.
-			////
-			//serializeJson(doc, Serial);
-			//// The above line prints:
-			//// {"sensor":"gps","time":1351824120,"data":[48.756080,2.302038]}
-
-			//// Start a new line
-			//Serial.println();
-
-			//// Generate the prettified JSON and send it to the Serial port.
-			////
-			//serializeJsonPretty(doc, Serial);
-			//// The above line prints:
-			//// {
-			////   "sensor": "gps",
-			////   "time": 1351824120,
-			////   "data": [
-			////     48.756080,
-			////     2.302038
-			////   ]
-			//// }
-
 			if (configuration.decode_enabled == 0) return;
 			DECODE_PORT.print((char)(msg & 0xff));
 			display_scroll_print_char((char)(msg & 0xff));
