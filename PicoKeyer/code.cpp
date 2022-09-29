@@ -17451,6 +17451,7 @@ void ps2int_write() {
 //--------------------------------------------------------------------- 
 
 void initialize_display() {
+	Serial.println("K3NG Keyer");
 
 #ifdef FEATURE_DISPLAY    
 #if defined(FEATURE_LCD_SAINSMART_I2C) || defined(FEATURE_LCD_I2C_FDEBRABANDER)

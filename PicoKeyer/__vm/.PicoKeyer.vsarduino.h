@@ -6,7 +6,7 @@
 			All non-arduino files created by visual micro and all visual studio project or solution files can be freely deleted and are not required to compile a sketch (do not delete your own code!).
 			Note: debugger breakpoints are stored in '.sln' or '.asln' files, knowledge of last uploaded breakpoints is stored in the upload.vmps.xml file. Both files are required to continue a previous debug session without needing to compile and upload again
 	
-	Hardware: Raspberry Pi Pico, Platform=rp2040, Package=rp2040
+	Hardware: Raspberry Pi Pico                                                                                                                (rp2040_rpipico), Platform=rp2040, Package=rp2040
 */
 
 #if defined(_VMICRO_INTELLISENSE)
@@ -16,83 +16,111 @@
 #define CFG_TUSB_MCU OPT_MCU_RP2040
 #define USB_VID 0x2e8a
 #define USB_PID 0x000a
+#define USB_MANUFACTURER "\"Raspberry
+#define USB_PRODUCT "\"Pico\""
+#define PICO_CYW43_ARCH_THREADSAFE_BACKGROUND 1
+#define CYW43_LWIP 0
+#define LWIP_IPV6 0
+#define LWIP_IPV4 1
+#define LWIP_IGMP 1
+#define LWIP_CHECKSUM_CTRL_PER_NETIF 1
+#define ARDUINO_VARIANT "rpipico"
+#define ARM_MATH_CM0_FAMILY 1
+#define ARM_MATH_CM0_PLUS 1
 #define SERIALUSB_PID 0x000a
 #define USBD_MAX_POWER_MA 250
-#define F_CPU 133000000L
-#define ARDUINO 108015
-#define ARDUINO_RASPBERRY_PI_PICO
-#define ARDUINO_ARCH_RP2040
-#define DEBUG_RP2040_WIRE
-#define DEBUG_RP2040_SPI
-#define DEBUG_RP2040_CORE
+#define F_CPU 125000000
+#define ARDUINO 108019
+#define ARDUINO_RASPBERRY_PI_PICO 1
+#define BOARD_NAME "RASPBERRY_PI_PICO"
+#define ARDUINO_ARCH_RP2040 1
 #define __cplusplus 201103L
+#define __GNUC__ 7
+#define _Pragma(x)
+#define __ARMCC_VERSION 6010050
+
+#define __PTRDIFF_TYPE__ int
+#define __ARM__
+//#define __arm__ 1
+#define always_inline
 #define __inline__
 #define __asm__(x)
+#define __attribute__(x)
 #define __extension__
 #define __ATTR_PURE__
 #define __ATTR_CONST__
 #define __inline__
 #define __volatile__
-
-
-#define __ICCARM__
+#define _Pragma(x)
 #define __ASM
 #define __INLINE
-#define __builtin_va_list void
-//#define _GNU_SOURCE 
-//#define __GNUC__ 0
-//#undef  __ICCARM__
-//#define __GNU__
 
-typedef long Pio;
-typedef long Efc;
-typedef long Adc;
-typedef long Pwm;
-typedef long Rtc;
-typedef long Rtt;
-typedef long pRtc;
-typedef long Spi;
-typedef long spi;
-typedef long Ssc;
-//typedef long p_scc;
-typedef long Tc;
-//typedef long pTc;
-typedef long Twi;
-typedef long Wdt;
-//typedef long pTwi;
-typedef long Usart;
-typedef long Pdc;
-typedef long Rstc;
-
-extern const int ADC_MR_TRGEN_DIS = 0;
-extern const int ADC_MR_TRGSEL_ADC_TRIG0 = 0;
-extern const int ADC_MR_TRGSEL_Pos = 0;
-
-extern const int ADC_MR_TRGSEL_Msk = 0;
-extern const int ADC_MR_TRGEN = 0;
-extern const int ADC_TRIG_TIO_CH_0 = 0;
-extern const int ADC_MR_TRGSEL_ADC_TRIG1 = 0;
-extern const int ADC_TRIG_TIO_CH_1 = 0;
-extern const int ADC_MR_TRGSEL_ADC_TRIG2 = 0;
-extern const int ADC_MR_TRGSEL_ADC_TRIG3 = 0;
-
-#define __ARMCC_VERSION 400678
-#define __attribute__(noinline)
-
-#define prog_void
-#define PGM_VOID_P int
+#define __INT32_TYPE__ long int
+#define __INTMAX_MAX__ 0x7fffffffffffffffLL
+#define STM32H747xx 1
+#define CORE_CM7
+#define __INTPTR_TYPE__ int
+#define __SIZE_TYPE__ unsigned int
 
 
-            
-typedef unsigned char byte;
-extern "C" void __cxa_pure_virtual() {;}
+#define __ARM_COMPAT_H
+#undef __cplusplus
+#define __cplusplus 201103L
+#define __cplusplus__ 1
+#define DOXYGEN_ONLY 1
 
+typedef void* common_type_t;
+typedef  int PinName;
+#define PinName int
+typedef  int PinMode;
+#define PinMode int
+#define _GLIBCXX_CSTRING 1
+#define _BASIC_IOS_H 1
+#define __COMPAT_H__ 1
+//#define  _STDLIB_H_ 1
+typedef void* __builtin_va_list;
 
-
-#include "arduino.h"
+class VM_DBG {
+public:
+	// Send a Message to the Serial Monitor via WiFi Connection 
+	void sendUserMessage(const char* theMessage) {};
+} MicroDebug;
+#include <arduino.h>
 #include <pins_arduino.h> 
-#undef cli
-#define cli()
+#undef INPUT
+#define INPUT 0x0
+#undef OUTPUT
+#define OUTPUT 0x1
+#undef LOW
+#define LOW 0u
+#undef HIGH
+#define HIGH 1u
+
+// Additions to override the introduced code from overrides.h which confuses intellisense
+#undef _GLIBCXX_DEFAULT_ABI_TAG
+#define _GLIBCXX_DEFAULT_ABI_TAG 
+#undef _GLIBCXX_HOSTED
+#define _GLIBCXX_HOSTED 0
+
+void pinMode(int pinNumber, int pinMode);
+void pinMode(int pinNumber, int pinMode) {}
+void digitalWrite(unsigned int pinNumber, PinStatus status);
+void digitalWrite(unsigned int pinNumber, PinStatus status) {}
+void digitalWrite(unsigned int pinNumber, unsigned int status);
+void digitalWrite(unsigned int pinNumber, unsigned int status) {}
+PinStatus digitalRead(unsigned int pinNumber);
+PinStatus digitalRead(unsigned int pinNumber) {}
+int analogRead(int pinNumber);
+int analogRead(int pinNumber) {}
+void analogWrite(int pinNumber, int value) {}
+unsigned long pulseIn(uint8_t pin, uint8_t state, unsigned long timeout) {}
+unsigned long pulseInLong(uint8_t pin, uint8_t state, unsigned long timeout) {}
+void shiftOut(int dataPin, int clockPin, BitOrder bitOrder, uint8_t val) {}
+uint8_t shiftIn(int dataPin, int clockPin, BitOrder bitOrder) {}
+void attachInterrupt(int interruptNumber, voidFuncPtr callback, PinStatus mode) {}
+void attachInterruptParam(int interruptNumber, voidFuncPtrParam callback, PinStatus mode, void* param) {}
+void detachInterrupt(int interruptNumber) {}
+
 #include "PicoKeyer.ino"
 #endif
 #endif

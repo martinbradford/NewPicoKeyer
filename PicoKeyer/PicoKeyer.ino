@@ -1462,6 +1462,7 @@ void loop()
 
     uint32_t start_time = micros();
 
+    Serial.printf("Entering loop = %d\n", start_time);
 #ifdef OPTION_WATCHDOG_TIMER
     wdt_reset();
 #endif  //OPTION_WATCHDOG_TIMER
